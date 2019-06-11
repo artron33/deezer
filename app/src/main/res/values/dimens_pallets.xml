@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="regular_height" >110dp</dimen>
+
+    <dimen name="margin_low_extra" >4dp</dimen>
+    <dimen name="margin_low" >8dp</dimen>
+    <dimen name="margin_medium_light" >12dp</dimen>
+    <dimen name="margin_medium" >16dp</dimen>
+    <dimen name="margin_high" >24dp</dimen>
+    <dimen name="margin_high_plus" >32dp</dimen>
+    <dimen name="margin_high_x" >40dp</dimen>
+    <dimen name="margin_high_xx" >48dp</dimen>
+
+
+    <dimen name="size_low" >24dp</dimen>
+    <dimen name="size_medium" >32dp</dimen>
+    <dimen name="size_medium_plus" >40dp</dimen>
+    <dimen name="size_hight" >48dp</dimen>
+    <dimen name="size_hight_plus" >56dp</dimen>
+
+
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="text" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="text.content" >
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text.vignette.toolbar" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="text.vignette" >
+        <!-- no used to... but provide meaning. -->
+    </style>
+
+    <style name="text.vignette.title" >
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="text.setting" >
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text.vignette.content" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="text.center_hor" >
+        <item name="android:gravity">center_horizontal</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="text.center" >
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <style name="text.center_hor.title" >
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="text.center.title" >
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="text.center_hor.content" >
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="text.center_hor.big_content" >
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text.center_hor.hint" >
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+    <style name="text.center_hor.content.button" >
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="text.center_hor.title.button" >
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!--<style name="text.center_hor.content.button.blue" >-->
+        <!--<item name="android:background">@drawable/background_border_red</item>-->
+    <!--</style>-->
+
+</resources>

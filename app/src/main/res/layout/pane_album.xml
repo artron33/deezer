@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+       android:layout_height="match_parent">
+
+
+    <View
+            android:id="@+id/album_color"
+            style="@style/fill.horizontal"
+            android:layout_marginStart="@dimen/margin_high_x"
+            android:layout_marginEnd="@dimen/margin_high_x"
+            android:layout_height="240dp"
+            android:background="@color/validation_lighter"
+            android:transitionName="@string/transitionname_album_color"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/regular_height"
+            android:layout_height="@dimen/regular_height"
+            android:id="@+id/album_img"
+            android:src="@mipmap/deezer"
+            app:layout_constraintTop_toBottomOf="@id/album_deezer_icon"
+            style="@style/wrap.horizontal"
+            android:transitionName="@string/transitionname_album_img"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/regular_height"
+            android:layout_height="@dimen/regular_height"
+            android:ellipsize="end"
+            android:id="@+id/album_title"
+            style="@style/text.center_hor.title"
+            android:gravity="center"
+            android:transitionName="@string/transitionname_album_title"
+            app:layout_constraintTop_toBottomOf="@id/album_img"
+            android:background="@color/validation_lightest"
+    />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/album_back"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/size_low"
+            android:src="@drawable/back_arrow"
+            android:background="@null"
+            android:transitionName="@string/transitionname_album_img"
+            android:scaleType="fitCenter"
+    />
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/size_hight"
+            android:layout_height="@dimen/size_hight"
+            android:src="@mipmap/deezer"
+            android:background="@color/error_darker"
+            android:id="@+id/album_deezer_icon"
+            app:layout_constraintTop_toTopOf="@id/album_back"
+            app:layout_constraintBottom_toBottomOf="@id/album_back"
+            app:layout_constraintStart_toEndOf="@id/album_back"
+            android:transitionName="@string/transitionname_logo"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+    />
+
+</merge>

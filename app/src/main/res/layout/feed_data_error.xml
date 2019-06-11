@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/empty_feed_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="noTasks"
+    />
+
+    <!-- lazy re-use -->
+    <LinearLayout
+            android:id="@+id/noTasks"
+            style="@style/wrap.horizontal.vertical"
+            app:layout_constraintTop_toBottomOf="@id/deezer_icon"
+            android:orientation="vertical">
+        <ImageView
+                android:id="@+id/noTasksIcon"
+                android:layout_width="@dimen/size_hight"
+                android:layout_height="@dimen/size_hight"
+                android:layout_gravity="center"
+                android:src="@drawable/placeholder_album" />
+
+        <TextView
+                android:id="@+id/noTasksMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/feed_empty_no_feeds_all"
+                android:layout_marginBottom="@dimen/list_item_padding" />
+
+        <TextView
+                android:id="@+id/noTasksAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_hight"
+                android:layout_gravity="center"
+                android:background="@mipmap/placeholder_deezer"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:text="@string/feed_empty_no_feeds_add" />
+
+    </LinearLayout>
+</merge>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="deezer_app_name">deezer ComponentFirst</string>
+
+    <string name="feed_empty_loading_feeds_error">Error while loading Albums</string>
+    <string name="feed_empty_no_feeds_add">Reload from internet</string>
+    <string name="feed_empty_no_feeds_all">You have no Data!</string>
+
+    <string name="refresh">Refresh</string>
+
+
+    <!--Transition Name-->
+    <string name="transitionname_logo">logo_deezer</string>
+    <string name="transitionname_album_title">album_title</string>
+    <string name="transitionname_album_img">album_img</string>
+    <string name="transitionname_album_color">album_color</string>
+</resources>

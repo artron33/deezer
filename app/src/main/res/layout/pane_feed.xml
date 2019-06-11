@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+>
+
+    <!--Or we can even do a viewCustom as a subViewController-->
+    <include layout="@layout/feed_data_ok" />
+
+    <!--Or we can even do a viewCustom as a subViewController-->
+    <include layout="@layout/feed_data_error" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ididididid"
+            style="@style/wrap.horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="?android:attr/actionBarSize"
+    >
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="@dimen/margin_low"
+                android:clipToPadding="false"
+                android:layout_width="@dimen/size_medium_plus"
+                android:layout_height="@dimen/size_medium_plus"
+                android:id="@+id/deezer_icon"
+                android:src="@mipmap/deezer"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:transitionName="@string/transitionname_logo"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

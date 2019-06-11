@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_lightest">#E8FAFC</color>
+    <color name="primary_lighter">#8BE3ED</color>
+    <color name="primary">#16C5D9</color>
+    <color name="primary_darker">#1194A3</color>
+    <color name="primary_darkest">#0B636D</color>
+
+    <color name="accent_lightest">#FFFAE6</color>
+    <color name="accent_lighter">#FFE280</color>
+    <color name="accent">#FFC400</color>
+    <color name="accent_darker">#D9A700</color>
+    <color name="accent_darkest">#806200</color>
+
+    <color name="purple_light">#D8BFD8</color>
+
+    <color name="error_lightest">#FEF0ED</color>
+    <color name="error_lighter">#F28A75</color>
+    <color name="error">#ED6347</color>
+    <color name="error_darker">#C9543C</color>
+    <color name="error_darkest">#773224</color>
+
+    <color name="warning_lightest">#FEF5ED</color>
+    <color name="warning_lighter">#FACAA1</color>
+    <color name="warning">#F49342</color>
+    <color name="warning_darker">#CF7D38</color>
+    <color name="warning_darkest">#7A4A21</color>
+
+    <color name="validation_lightest">#F2FAEC</color>
+    <color name="validation_lighter">#BDE6A9</color>
+    <color name="validation">#7ACC52</color>
+    <color name="validation_darker">#68AD46</color>
+    <color name="validation_darkest">#3D6629</color>
+
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_polar">#F4FBFE</color>
+
+    <color name="ui_level100">#F5F7FA</color>
+    <color name="ui_level200">#F0F3F6</color>
+    <color name="ui_level300">#DFE3E6</color>
+    <color name="ui_level350">#B3B9BD</color>
+    <color name="ui_level400">#8C9BA5</color>
+
+    <color name="ui_level4_opacity4">#518C9BA5</color>
+    <color name="ui_level4_opacity3">#898C9BA5</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

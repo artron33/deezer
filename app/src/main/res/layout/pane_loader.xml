@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ididididid"
+            style="@style/fill.horizontal.vertical"
+            android:layout_height="wrap_content"
+    >
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/regular_height"
+                android:layout_height="@dimen/regular_height"
+                android:src="@mipmap/deezer"
+                android:id="@+id/deezer_icon"
+                style="@style/wrap.horizontal.vertical"
+                android:transitionName="@string/transitionname_logo"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>
