@@ -1,7 +1,7 @@
 # deezer
 
 
-![alt text](DOC/deezer_gif.gif?raw=true=600x308 "Gif" )
+![](DOC/deezer_gif.gif?=600x308 "Gif" )
 
 # Deezer Test Presentation
 
@@ -15,7 +15,7 @@
     - Un presenter pour choisir quel sub-view doit être appelé
     - Un ViewState (en guise de ViewModel)
     - Des ViewEvent, pour fire des UseCase (à la manière des Intent avec les Action).
-![alt text](DOC/architecture.png?raw=true=600x308 "Architecture")
+![](DOC/architecture.png?=600x308 "Architecture")
 
 ## Test.Strategie :
     - Des test Unitaire (car moins onéreux)
@@ -23,7 +23,7 @@
         + sans internet: test vraiment le repo
         + avec internet: test en plus les lib et le serveur
     - Il manque les test d' UI avant la release de l'app pour assurer un softLaunch sans probleme
-![alt text](DOC/test.png?raw=true=600x308 "Test")
+![](DOC/test.png?=600x308 "Test")
 
 
 ## Scalable :
@@ -34,8 +34,8 @@
     - Permet une meilleure agilité entre les divers composant, afin de build des version très différente :
         + (Asi / Europe)
         + Les pub interstitiel en Angletterre sont proscrite, alors qu'elles fonctionnent bien en France
-![alt text](DOC/compicados.png?raw=true=600x308 "compicados")
-![alt text](DOC/complexity.png?raw=true=600x308 "complexity")
+![](DOC/compicados.png?=600x308 "compicados")
+![](DOC/complexity.png?=600x308 "complexity")
 
 
 ## Pane :
