@@ -3,7 +3,7 @@ package com.siu.deezercomponentfirst.app.home.album.pane.view
 import androidx.appcompat.app.AppCompatActivity
 import com.siu.deezercomponentfirst.app.home.album.pane.AlbumPane
 import com.siu.deezercomponentfirst.app.home.navigator.MainNavigator
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 import com.siu.deezercomponentfirst.tools.architecture.mvp.view.ViewBase
 import com.siu.deezercomponentfirst.tools.library.image.glide.GlideImage
 import kotlinx.android.synthetic.main.pane_album.view.*

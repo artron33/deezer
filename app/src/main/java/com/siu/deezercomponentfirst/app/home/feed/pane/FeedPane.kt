@@ -10,7 +10,7 @@ import com.siu.deezercomponentfirst.app.home.feed.pane.presenter.FeedPresenter
 import com.siu.deezercomponentfirst.app.home.feed.pane.usecase.FeedUseCase
 import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.EmptyFeedView
 import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.FeedEmptyViewEventBase
-import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.FeedOkView
+import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.OkFeedView
 import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.FeedViewEventBase
 import java.lang.ref.WeakReference
 
@@ -22,7 +22,7 @@ class FeedPane @JvmOverloads constructor(
     activity: AppCompatActivity
 ) : GenericPane(context, attrs, defStyleAttr) {
 
-    val feedOkView by lazy { FeedOkView(
+    val feedOkView by lazy { OkFeedView(
         this,
         WeakReference(activity)
     ) }

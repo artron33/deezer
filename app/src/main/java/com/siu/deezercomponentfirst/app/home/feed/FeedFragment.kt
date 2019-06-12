@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.siu.deezercomponentfirst.app.home.feed.pane.FeedPane
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Feed
+import com.siu.deezercomponentfirst.data.net.response.Feed
 
 
 /**

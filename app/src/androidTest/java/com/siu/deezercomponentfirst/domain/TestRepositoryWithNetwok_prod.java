@@ -1,13 +1,12 @@
 package com.siu.deezercomponentfirst.domain;
 
 
-import android.util.Log;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
-import com.siu.deezercomponentfirst.domain.repository.feed.FeedsRepository;
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album;
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Feed;
 import com.siu.deezercomponentfirst.data.repository.FeedRepositoryNetwork;
+import com.siu.deezercomponentfirst.domain.repository.feed.FeedsRepository;
+import com.siu.deezercomponentfirst.data.net.response.Album;
+import com.siu.deezercomponentfirst.data.net.response.Feed;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import io.reactivex.observers.TestObserver;
@@ -58,11 +57,9 @@ public class TestRepositoryWithNetwok_prod {
         // Then the task can be retrieved from the persistent repository
         TestObserver<List<Album>> testObserver = new TestObserver<>();
         mRepository.getFeed("2529").subscribeWith(testObserver);
-        testObserver.assertValue(val -> {
-                    System.out.println("val== "+val);
-                    Log.e("yes", "val=="+val);
-                return val.equals(mAbums);
-        });
+        testObserver.assertValue(val ->
+                val.equals(mAbums)
+        );
     }
 
 

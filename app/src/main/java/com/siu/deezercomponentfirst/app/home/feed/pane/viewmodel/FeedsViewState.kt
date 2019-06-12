@@ -1,6 +1,6 @@
 package com.siu.deezercomponentfirst.app.home.feed.pane.viewmodel
 
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 
 data class FeedsViewState(
     val isLoading: Boolean,

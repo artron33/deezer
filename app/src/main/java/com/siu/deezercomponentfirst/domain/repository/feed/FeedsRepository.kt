@@ -2,10 +2,10 @@ package com.siu.deezercomponentfirst.domain.repository.feed
 
 import androidx.annotation.VisibleForTesting
 import com.google.common.base.Preconditions.checkNotNull
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Feed
+import com.siu.deezercomponentfirst.data.net.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Feed
 import io.reactivex.Completable
-import io.reactivex.Single
+import io.reactivex.Maybe
 
 
 class FeedsRepository// Prevent direct instantiation.
@@ -28,7 +28,7 @@ private constructor(
      * Gets feeds from local Albums source (sqlite) unless the table is new or empty. In that case it
      * uses the network Albums source. This is done to simplify the sample.
      */
-    override fun getFeed(feedId: String): Single<MutableList<Album>> {
+    override fun getFeed(feedId: String): Maybe<MutableList<Album>> {
         return mFeedDataNetwork.getFeed(feedId)
     }
 

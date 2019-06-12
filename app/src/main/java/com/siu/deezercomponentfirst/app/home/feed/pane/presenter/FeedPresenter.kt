@@ -2,7 +2,7 @@ package com.siu.deezercomponentfirst.app.home.feed.pane.presenter
 
 
 import com.siu.deezercomponentfirst.app.home.feed.pane.viewmodel.FeedsViewState
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 import com.siu.deezercomponentfirst.tools.architecture.mvp.presenter.PresenterBase
 import com.siu.deezercomponentfirst.tools.architecture.mvp.view.ViewBase
 import com.siu.deezercomponentfirst.tools.architecture.mvp.view.ViewEventBase

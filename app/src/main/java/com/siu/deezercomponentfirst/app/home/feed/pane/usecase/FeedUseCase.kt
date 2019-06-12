@@ -17,7 +17,7 @@ class FeedUseCase (
 ) : BaseUseCase {
 
     private val mDisposables = CompositeDisposable()
-    private val disposer =
+    private val disposer = {
         mFeedsRepository
             .getFeed(feedId)
             .subscribeOn(mSchedulerProvider.io())
@@ -28,8 +28,9 @@ class FeedUseCase (
             .doOnError {
                 feedPresenter.render(FeedsViewState(false, error = it))
 
-            }
-            .subscribe()
+            }.subscribe()
+    }
+
 
     override fun init() {
         feedPresenter.setLoadMore { load() }
@@ -38,12 +39,12 @@ class FeedUseCase (
     }
 
     private fun initLoading() {
-         mDisposables.add(disposer)
+         mDisposables.add(disposer.invoke())
 
     }
 
     private fun load() {
-        mDisposables.add(disposer)
+        mDisposables.add(disposer.invoke())
 
     }
 

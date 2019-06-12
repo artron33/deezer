@@ -12,7 +12,6 @@ class FeedViewEventBase(
 ) : ViewEventBase {
 
     private val recyclerView = feedPane.feed_recycler
-//    private var loading = false
 
     override fun setLoadMore(loadMore: () -> Unit) {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -25,26 +24,9 @@ class FeedViewEventBase(
 
     private fun shouldLoadMore(loadMore: () -> Unit) {
         val linearLayoutManager = recyclerView.layoutManager as GridLayoutManager
-        if (
-//            !loading &&
-            linearLayoutManager.itemCount <= linearLayoutManager.findLastVisibleItemPosition() + 2 ) {
+        if (linearLayoutManager.itemCount <= linearLayoutManager.findLastVisibleItemPosition() + 2 ) {
             loadMore()
-//            loading = true
         }
     }
-//
-//    override fun show(albums: List<Album>) {
-//        setLoaded()
-//    }
-//    override fun showLoadingError() {
-//        setLoaded()
-//    }
-//
-//    override fun showNos() {
-//        setLoaded()
-//    }
-//
-//    private fun setLoaded() {
-//        loading = false
-//    }
+
 }

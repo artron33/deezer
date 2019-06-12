@@ -7,8 +7,8 @@ import androidx.test.filters.LargeTest;
 import androidx.test.platform.app.InstrumentationRegistry;
 import com.siu.deezer.injection.Injection;
 import com.siu.deezercomponentfirst.domain.repository.feed.FeedsRepository;
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album;
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Feed;
+import com.siu.deezercomponentfirst.data.net.response.Album;
+import com.siu.deezercomponentfirst.data.net.response.Feed;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import io.reactivex.observers.TestObserver;
@@ -43,8 +43,7 @@ public class TestRepositoryWith_variant {
         FeedsRepository.Companion.destroyInstance();
 
         final Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-
-        mRepository = Injection.provideFeedsRepository(appContext);
+        mRepository = Injection.provideFeedsRepository();
     }
 
     @Test

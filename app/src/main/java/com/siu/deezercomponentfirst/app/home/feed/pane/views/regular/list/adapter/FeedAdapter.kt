@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.siu.deezercomponentfirst.app.home.feed.pane.FeedPane
 import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.list.row.FeedRow
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 import kotlinx.android.synthetic.main.pane_feed.view.*
 import java.lang.ref.WeakReference
 

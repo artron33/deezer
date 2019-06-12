@@ -1,6 +1,6 @@
 package com.siu.deezercomponentfirst.app.home.album.pane.presenter
 
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 import com.siu.deezercomponentfirst.tools.architecture.mvp.presenter.PresenterBase
 import com.siu.deezercomponentfirst.tools.architecture.mvp.view.ViewBase
 

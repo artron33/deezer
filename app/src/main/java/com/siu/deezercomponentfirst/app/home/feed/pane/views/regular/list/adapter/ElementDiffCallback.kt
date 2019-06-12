@@ -1,7 +1,7 @@
 package com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.list.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.siu.deezercomponentfirst.domain.repository.feed.response.Album
+import com.siu.deezercomponentfirst.data.net.response.Album
 
 class ElementDiffCallback : DiffUtil.ItemCallback<Album>() {
 
