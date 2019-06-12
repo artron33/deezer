@@ -5,7 +5,7 @@
     - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
     - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
 
-![](DOC/deezer_gif.gif?=400x200  )
+![](DOC/deezer_gif.gif?=100x20  )
 
 # Deezer Test Presentation
 
@@ -22,11 +22,10 @@
 ![](DOC/architecture.png?=400x200 )
 
 ## Test.Strategie :
-    - Des test Unitaire (car moins onéreux)
+    - Des test Unitaire 
     - Des test de repository (avec et sans internet)
         + sans internet: test vraiment le repo
         + avec internet: test en plus les lib et le serveur
-    - Il manque les test d' UI avant la release de l'app pour assurer un softLaunch sans probleme
 ![](DOC/test.png?=400x200 )
 
 
