@@ -12,6 +12,12 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 
+/**
+ * can only run the test in build.MOCK
+ * temporary working solution, instead of creating a
+ * test that will never work with no data to understand
+ * the issues
+ */
 class UseCasePresenterUnitTest {
 
     @Mock

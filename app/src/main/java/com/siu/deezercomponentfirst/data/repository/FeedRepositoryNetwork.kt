@@ -19,19 +19,22 @@ class FeedRepositoryNetwork : FeedsDataSource.Network {
         remoteFeed = getFeedNetwork(feedId)
             .onErrorReturnItem(Feed())
             .doOnSuccess { feed ->
-                val tempIndex = feed.next
-                    .substringAfterLast("index=")
-                    .toIntOrNull() ?: FULL_LOADED
 
-                if (tempIndex == index) {
-                    //Then we has a double request
-                } else {
-                    index = tempIndex
-                    mAlbums.addAll(feed.data)
+                //todo build a system to avoid request when no connection
+                if (!feed.checksum.isNullOrEmpty()) {
+                    val tempIndex = feed.next
+                        .substringAfterLast("index=")
+                        .toIntOrNull() ?: FULL_LOADED
+
+                    if (tempIndex == index) {
+                        //Then we has a double request
+                    } else {
+                        index = tempIndex
+                        mAlbums.addAll(feed.data)
+                    }
                 }
 
             }.doOnError {
-                println("----------------------$it")
                 it.printStackTrace()
 
             }.map<MutableList<Album>> {

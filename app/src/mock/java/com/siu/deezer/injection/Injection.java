@@ -20,4 +20,8 @@ public class Injection {
     public static BaseSchedulerProvider provideSchedulerProvider() {
         return SchedulerProvider.getInstance();
     }
+    public static List<Album> getMockFeed() {
+        return new FakeTasksRemoteDataSource().getData();
+    }
+
 }

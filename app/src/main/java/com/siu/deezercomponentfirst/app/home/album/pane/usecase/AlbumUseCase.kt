@@ -14,6 +14,7 @@ class AlbumUseCase(
     feedId: String = "2529"
 
 ) {
+
     private val mDisposables = CompositeDisposable()
 
     private val disposer = mFeedsRepository

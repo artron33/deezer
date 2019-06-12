@@ -8,9 +8,9 @@ import com.siu.deezercomponentfirst.R
 import com.siu.deezercomponentfirst.app.custom.generic.GenericPane
 import com.siu.deezercomponentfirst.app.home.feed.pane.presenter.FeedPresenter
 import com.siu.deezercomponentfirst.app.home.feed.pane.usecase.FeedUseCase
-import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.EmptyFeedView
-import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.FeedEmptyViewEventBase
-import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.OkFeedView
+import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.FeedEmptyView
+import com.siu.deezercomponentfirst.app.home.feed.pane.views.empty.FeedEmptyViewEvent
+import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.FeedOkView
 import com.siu.deezercomponentfirst.app.home.feed.pane.views.regular.FeedViewEventBase
 import java.lang.ref.WeakReference
 
@@ -22,12 +22,12 @@ class FeedPane @JvmOverloads constructor(
     activity: AppCompatActivity
 ) : GenericPane(context, attrs, defStyleAttr) {
 
-    val feedOkView by lazy { OkFeedView(
+    val feedOkView by lazy { FeedOkView(
         this,
         WeakReference(activity)
     ) }
-    val feedEmptyView by lazy { EmptyFeedView(this) }
-    val feedEmptyViewEvent by lazy { FeedEmptyViewEventBase(this) }
+    val feedEmptyView by lazy { FeedEmptyView(this) }
+    val feedEmptyViewEvent by lazy { FeedEmptyViewEvent(this) }
 
     val feedUseCase by lazy {
         FeedUseCase(
