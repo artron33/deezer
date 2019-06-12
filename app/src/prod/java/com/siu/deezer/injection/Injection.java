@@ -4,6 +4,7 @@ import com.siu.deezercomponentfirst.data.net.response.Album;
 import com.siu.deezercomponentfirst.data.net.response.Feed;
 import com.siu.deezercomponentfirst.data.repository.FeedRepositoryNetwork;
 import com.siu.deezercomponentfirst.domain.repository.feed.FeedsRepository;
+import com.siu.deezercomponentfirst.tools.library.network.retrofit.RetrofitRepo;
 import com.siu.deezercomponentfirst.tools.library.rxjava.BaseSchedulerProvider;
 import com.siu.deezercomponentfirst.tools.library.rxjava.SchedulerProvider;
 
@@ -18,7 +19,12 @@ public class Injection {
      * @return
      */
     public static FeedsRepository provideFeedsRepository() {
-        return FeedsRepository.Companion.getInstance(new FeedRepositoryNetwork());
+
+        return FeedsRepository.Companion.getInstance(
+                new FeedRepositoryNetwork(
+                        RetrofitRepo.Companion.getInstance().getFeedsService()
+                )
+        );
 //todo: impleDataBase                FeedsLocalDataSource.getInstance(ToDoDatabase.Companion.getInstance(context).taskDao()));
     }
 

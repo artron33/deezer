@@ -1,23 +1,24 @@
 package com.siu.deezercomponentfirst.data.repository
 
+import androidx.annotation.VisibleForTesting
 import com.siu.deezercomponentfirst.data.net.response.Album
 import com.siu.deezercomponentfirst.data.net.response.Feed
 import com.siu.deezercomponentfirst.domain.repository.feed.FeedsDataSource
-import com.siu.deezercomponentfirst.tools.library.network.retrofit.RetrofitRepo
+import com.siu.deezercomponentfirst.tools.library.network.retrofit.services.FeedsService
 import io.reactivex.Maybe
 
-class FeedRepositoryNetwork : FeedsDataSource.Network {
+class FeedRepositoryNetwork(val service: FeedsService) : FeedsDataSource.Network {
 
     private var index = 0
     private val mAlbums: MutableList<Album> = mutableListOf()
 
     override fun getFeed(feedId: String): Maybe<MutableList<Album>> {
         var remoteFeed = Maybe.just(mAlbums.toMutableList())
-        if (index == FULL_LOADED) {
+        if (doesFullDataLoaded()) {
             return remoteFeed
         }
         remoteFeed = getFeedNetwork(feedId)
-            .onErrorReturnItem(Feed())
+            .onErrorReturnItem(INTERNET_ISSUE_DATA)
             .doOnSuccess { feed ->
 
                 //todo build a system to avoid request when no connection
@@ -44,12 +45,17 @@ class FeedRepositoryNetwork : FeedsDataSource.Network {
         return remoteFeed
     }
 
+    @VisibleForTesting
+    fun doesFullDataLoaded() = index == FULL_LOADED
+
     private fun getFeedNetwork(feedId: String): Maybe<Feed> {
-        return RetrofitRepo.getInstance().feedsService.feed(feedId, index)
+        return service.feed(feedId, index)
     }
 
     companion object {
         const val FULL_LOADED = -1
+
+        val INTERNET_ISSUE_DATA = Feed()
     }
 
 }
