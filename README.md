@@ -21,7 +21,7 @@
     - Un ViewState (en guise de ViewModel)
     - Des ViewEvent, pour fire des UseCase (à la manière des Intent avec 
     les Action).
-<img src="DOC/architecture.png" width="300">
+<img src="DOC/architecture.png" >
 
 ## Test.Strategie :
     - Des test Unitaire 
@@ -43,8 +43,8 @@
         + (Asi / Europe).
         + Les pub interstitiel en Angletterre sont proscrite, alors qu'elles 
         fonctionnent bien en France.
-<img src="DOC/compicados.png" width="300">
-<img src="DOC/complexity.png" width="300">
+<img src="DOC/compicados.png" >
+<img src="DOC/complexity.png" >
 
 
 ## Pane :
