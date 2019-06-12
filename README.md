@@ -4,9 +4,8 @@
     - J'ai pris toutes les libs des projets ou j'ai pris un peu de code (sans faire de tri)
     - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
     - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
-![](DOC/deezer_gif.gif | width=100)
 
-<img src="DOC/deezer_gif.gif" width="48">
+<img src="DOC/deezer_gif.gif" width="300">
 
 
 # Deezer Test Presentation
@@ -22,7 +21,7 @@
     - Un ViewState (en guise de ViewModel)
     - Des ViewEvent, pour fire des UseCase (à la manière des Intent avec 
     les Action).
-![](DOC/architecture.png? =400x200 )
+<img src="DOC/architecture.png" width="300">
 
 ## Test.Strategie :
     - Des test Unitaire 
@@ -44,8 +43,8 @@
         + (Asi / Europe).
         + Les pub interstitiel en Angletterre sont proscrite, alors qu'elles 
         fonctionnent bien en France.
-![](DOC/compicados.png?=400x200 )
-![](DOC/complexity.png?=400x200 )
+<img src="DOC/compicados.png" width="300">
+<img src="DOC/complexity.png" width="300">
 
 
 ## Pane :
