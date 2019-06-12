@@ -1,5 +1,9 @@
 # deezer
 
+### Out of the test :
+    - J'ai pris toutes les libs des projets ou j'ai pris un peu de code (sans faire de tri)
+    - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
+    - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
 
 ![](DOC/deezer_gif.gif?=400x200  )
 
