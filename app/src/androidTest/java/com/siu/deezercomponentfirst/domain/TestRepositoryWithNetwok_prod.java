@@ -61,22 +61,6 @@ public class TestRepositoryWithNetwok_prod {
         );
     }
 
-    @Test
-    public void retrievesFeedAsNoInternet() throws IOException {
-        Moshi moshi = new Moshi.Builder().build();
-        JsonAdapter<Feed> jsonAdapter = moshi.adapter(Feed.class);
-
-        Feed feedMock = jsonAdapter.fromJson(dataJson);
-        final List<Album> mAbums = (new Feed()).getData();
-
-        // Then the task can be retrieved from the persistent repository
-        TestObserver<List<Album>> testObserver = new TestObserver<>();
-        mRepository.getFeed("2529").subscribeWith(testObserver);
-        testObserver.assertValue(value ->
-                value.equals(mAbums)
-        );
-    }
-
 
 
 }
