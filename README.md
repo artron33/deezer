@@ -4,8 +4,8 @@
     - J'ai pris toutes les libs des projets ou j'ai pris un peu de code (sans faire de tri)
     - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
     - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
-
-![](DOC/deezer_gif.gif?=100x20  )
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)`
+![](DOC/deezer_gif.gif | width=100)
 
 # Deezer Test Presentation
 
@@ -18,8 +18,9 @@
 
     - Un presenter pour choisir quel sub-view doit être appelé
     - Un ViewState (en guise de ViewModel)
-    - Des ViewEvent, pour fire des UseCase (à la manière des Intent avec les Action).
-![](DOC/architecture.png?=400x200 )
+    - Des ViewEvent, pour fire des UseCase (à la manière des Intent avec 
+    les Action).
+![](DOC/architecture.png? =400x200 )
 
 ## Test.Strategie :
     - Des test Unitaire 
@@ -31,20 +32,24 @@
 
 ## Scalable :
     - Multiplier les ViewState avec presenter et usecase associer.
-    - Permet de recoder plusieurs fois de petit bout de code
-    - DUPLIQUER? JAMAIS ! Sauf qu'en se faisant, on rend le dev plus intéressant et on évite d'avoir une équipe qui disparait tous les 6 mois. Car le projet n'est pas agréable à coder
-    - En plus ! Permet d'avoir un mode ESSAYER facilement
-    - Permet une meilleure agilité entre les divers composant, afin de build des version très différente :
-        + (Asi / Europe)
-        + Les pub interstitiel en Angletterre sont proscrite, alors qu'elles fonctionnent bien en France
+    - Permet de recoder plusieurs fois de petit bout de code.
+    - DUPLIQUER? JAMAIS ! Sauf qu'en se faisant, on rend le dev plus 
+    intéressant et on évite d'avoir une équipe qui disparait tous les 
+    6 mois. Car le projet n'est pas agréable à coder.
+    - En plus ! Permet d'avoir un mode ESSAYER facilement.
+    - Permet une meilleure agilité entre les divers composant, afin de build
+    des version très différente :
+        + (Asi / Europe).
+        + Les pub interstitiel en Angletterre sont proscrite, alors qu'elles 
+        fonctionnent bien en France.
 ![](DOC/compicados.png?=400x200 )
 ![](DOC/complexity.png?=400x200 )
 
 
 ## Pane :
     - Ce que j'appelle une pane est une View Custom qui regroupe l'ensemble des composant:
-         + Event, UseCase, Presenter, View
-    - Ne plus avoir besoin des fragment !! Eviter le code spagethi des fragments
+         + Event, UseCase, Presenter, View.
+    - Ne plus avoir besoin des fragment !! Eviter le code spagethi des fragments.
 
 ## Sans Fragment (donc sans transition de fragment aussi...) il reste :
     - Des sub-view-controller, à base de Constraint Layout avec Etat :
@@ -58,5 +63,4 @@
             + Oui, on perd du temps à initialiser un tel projet (car un peu d'archi à faire sans les fragment)
             + Mais pour la suite: #Productivité, #UX, #Design, #Facile_a_update
 
-        ps: j'ai utilisé RX pour montrer que je connais
 
