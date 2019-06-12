@@ -4,9 +4,10 @@
     - J'ai pris toutes les libs des projets ou j'ai pris un peu de code (sans faire de tri)
     - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
     - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
-
 ![](DOC/deezer_gif.gif | width=100)
+
+<img src="DOC/deezer_gif.gif" width="48">
+
 
 # Deezer Test Presentation
 
