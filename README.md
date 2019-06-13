@@ -49,19 +49,18 @@
 
 ## Pane :
     - Ce que j'appelle une pane est une View Custom qui regroupe l'ensemble des composant:
-         + Event, UseCase, Presenter, View.
-    - Ne plus avoir besoin des fragment !! Eviter le code spagethi des fragments.
+         - Event, UseCase, Presenter, viewController (dont les states, key_frame)
+    - Un ViewController:
+        - Composoant qui regroupe les 3 layout : enter, inside, exit
+        - pour gérer les switch entre les view, grace au constraintSet
+    - Chaque Etat doit avoir :
+        - 3 layout : enter, inside, exit (pour assurer les transition de manière autonome)
 
-## Sans Fragment (donc sans transition de fragment aussi...) il reste :
-    - Des sub-view-controller, à base de Constraint Layout avec Etat :
-        + Enter / IN / EXIT qui sont 3 layout.xml
-        + Avec l'api des Constraint layout, on peut AUTOMATIQUEMENT annimé les changements entre états
-        + Les ViewController permettent d'avoir ces anim très facilement.
-            + Ces ViewController rajoute un niveau de layer "useless"
-            + Mais, on peut faire des diff entre les Etat très facilement !
-            + De très belle anim, simple à maintenir (car ne sont que des KeyFrame dans un xml)
-            + Ne plus avoir besoin du Context/Actvity pour load une nouvelle view (ce qui allège énormement l'architecture)
-            + Oui, on perd du temps à initialiser un tel projet (car un peu d'archi à faire sans les fragment)
-            + Mais pour la suite: #Productivité, #UX, #Design, #Facile_a_update
+| layout_enter                    | layout_inside                   | resultat                              | code                            |
+| :---                            |     :---                        |                               :---:   |                            ---: |
+| <img src="DOC/pane_key_0.png" > | <img src="DOC/pane_key_2.png" > | <img src="DOC/pane_transition.gif" >  | <img src="DOC/pane_code.png" >  |
 
 
+
+ref : https://www.youtube.com/watch?v=OHcfs6rStRo
+<img src="DOC/pane_.png" >
