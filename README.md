@@ -2,8 +2,8 @@
 
 ### Out of the test :
     - J'ai pris toutes les libs des projets ou j'ai pris un peu de code (sans faire de tri)
-    - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de row
-    - Un build Mock avec un petit jeu de fake data (toute title = nekfeu)
+    - Il y a une variable COLUM_NUMBER dans build.gradle (app) pour choisir le nombre de colones (grid)
+    - Un build Mock avec un petit jeu de fake data (toute avec title = nekfeu)
 
 <img src="DOC/deezer_gif.gif" width="300">
 
@@ -56,11 +56,11 @@
     - Chaque Etat doit avoir :
         - 3 layout : enter, inside, exit (pour assurer les transition de manière autonome)
 
-| layout_enter                    | layout_inside                   | resultat                              | code                            |
-| :---                            |     :---                        |                               :---:   |                            ---: |
-| <img src="DOC/pane_key_0.png" > | <img src="DOC/pane_key_2.png" > | <img src="DOC/pane_transition.gif" >  | <img src="DOC/pane_code.png" >  |
+| layout_enter                    | layout_inside                   | resultat                             |
+| :---                            |     :---                        | :---                                 |
+| <img src="DOC/pane_key_0.png" width="210"> | <img src="DOC/pane_key_2.png" width="210"> | <img src="DOC/pane_transition.gif" width="360"> |
 
-
+<img src="DOC/pane_code.png" >
 
 ref : https://www.youtube.com/watch?v=OHcfs6rStRo
 <img src="DOC/pane_.png" >
