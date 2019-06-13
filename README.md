@@ -56,11 +56,10 @@
     - Chaque Etat doit avoir :
         - 3 layout : enter, inside, exit (pour assurer les transition de manière autonome)
 
-| layout_enter                    | layout_inside                   | resultat                              | code                            |
-| :---                            |     :---                        |                               :---:   |                            ---: |
-| <img src="DOC/pane_key_0.png" > | <img src="DOC/pane_key_2.png" > | <img src="DOC/pane_transition.gif" >  | <img src="DOC/pane_code.png" >  |
-
-
+| layout_enter                    | layout_inside                   | resultat                              |
+| :---                            |     :---                        |                               :---:   |
+| <img src="DOC/pane_key_0.png" > | <img src="DOC/pane_key_2.png" > | <img src="DOC/pane_transition.gif" >  |
+<img src="DOC/pane_code.png" >
 
 ref : https://www.youtube.com/watch?v=OHcfs6rStRo
 <img src="DOC/pane_.png" >
