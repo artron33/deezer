@@ -1,6 +1,6 @@
 package com.siu.deezer.injection;
 
-import com.siu.deezer.injection.data.FakeTasksRemoteDataSource;
+import com.siu.deezer.injection.data.FakeFeedRemoteDataSource;
 import com.siu.deezercomponentfirst.data.net.response.Album;
 import com.siu.deezercomponentfirst.domain.repository.feed.FeedsDataSource;
 import com.siu.deezercomponentfirst.domain.repository.feed.FeedsRepository;
@@ -17,14 +17,15 @@ import java.util.List;
 public class Injection {
 
     public static FeedsRepository provideFeedsRepository() {
-        return FeedsRepository.Companion.getInstance(new FakeTasksRemoteDataSource());
+        return FeedsRepository.Companion.getInstance(new FakeFeedRemoteDataSource());
     }
 
     public static BaseSchedulerProvider provideSchedulerProvider() {
         return SchedulerProvider.getInstance();
     }
+
     public static List<Album> getMockFeed() {
-        return new FakeTasksRemoteDataSource().getMockFeed();
+        return FakeFeedRemoteDataSource.Companion.getMockFeed();
     }
 
 }

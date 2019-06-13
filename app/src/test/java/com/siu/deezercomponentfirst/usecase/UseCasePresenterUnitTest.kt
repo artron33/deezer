@@ -1,6 +1,6 @@
 package com.siu.deezercomponentfirst.usecase
 
-import com.siu.deezer.injection.data.FakeTasksRemoteDataSource
+import com.siu.deezer.injection.data.FakeFeedRemoteDataSource
 import com.siu.deezercomponentfirst.app.home.feed.pane.presenter.FeedPresenterInterface
 import com.siu.deezercomponentfirst.app.home.feed.pane.usecase.FeedUseCase
 import com.siu.deezercomponentfirst.app.home.feed.pane.viewmodel.FeedsViewState
@@ -30,7 +30,7 @@ class UseCasePresenterUnitTest {
         MockitoAnnotations.initMocks(this)
 
         mFeedPresenter = FeedUseCase(
-            FeedsRepository.getInstance(FakeTasksRemoteDataSource()),
+            FeedsRepository.getInstance(FakeFeedRemoteDataSource()),
             TestImmediateSchedulerProvider(),
             mPresenter
         )
@@ -41,7 +41,7 @@ class UseCasePresenterUnitTest {
     fun showFeed_FromPresenterThroughViewState() {
         mFeedPresenter.init()
 
-        Mockito.verify(mPresenter).render(FeedsViewState(false, FakeTasksRemoteDataSource().getMockFeed()))
+        Mockito.verify(mPresenter).render(FeedsViewState(false, FakeFeedRemoteDataSource.getMockFeed()))
 
     }
 

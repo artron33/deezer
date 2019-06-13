@@ -6,7 +6,6 @@ package com.siu.deezercomponentfirst
 //import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -22,6 +21,7 @@ class TestPackageName {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.siu.deezercomponentfirst", appContext.packageName)
+        assert( "com.siu.deezercomponentfirst".equals(arrayOf(appContext.packageName))
+             || "com.siu.deezercomponentfirst.mock".equals(arrayOf(appContext.packageName)))
     }
 }
